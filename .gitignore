@@ -1,0 +1,6 @@
+.phpunit.result.cache
+.env
+*.p12
+.php_cs.cache
+
+vendor/

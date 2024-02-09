@@ -1,0 +1,55 @@
+{
+    "name": "loduis/feec-transport",
+    "authors": [
+        {
+            "name": "Loduis Madariaga",
+            "email": "loduis@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "FEEC\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FEEC\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": "^7.4|^8.0",
+        "loduis/feec-signer": "dev-main",
+        "loduis/xml-finder": "master",
+        "loduis/support": "dev-main",
+        "loduis/zip": "dev-main",
+        "loduis/xml-support": "master",
+        "loduis/feec-helpers": "dev-main"
+    },
+    "require-dev": {
+        "loduis/xml-tests": "master"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/loduis/php-zip.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/loduis/php-support.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/loduis/php-fe-ec-signer.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/loduis/php-fe-ec-helpers.git"
+        }
+    ],
+    "config": {
+        "sort-packages": true
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev"
+}
