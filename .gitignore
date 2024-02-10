@@ -3,4 +3,6 @@
 *.p12
 .php_cs.cache
 
+tests/test.php
+
 vendor/

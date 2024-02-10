@@ -6,16 +6,16 @@ use stdClass;
 
 const HANDLERS = [
     'autorizacionComprobante' => 'Status',
-    'SendBillSync' => 'SendSync',
+    'validarComprobante' => 'Send',
 ];
 
 class Response
 {
-    public static function from(stdClass $res, array $request)
+    public static function from(stdClass $res, iterable $opts)
     {
-        $action = $request['action'];
+        $action = $opts['action'];
         $Handler = __CLASS__ . '\\' .  HANDLERS[$action];
-
-        return new $Handler($res);
+        $key = 'Respuesta' . ucfirst($action);
+        return new $Handler($res->$key ?? $res, $opts);
     }
 }

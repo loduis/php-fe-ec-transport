@@ -27,7 +27,8 @@
         "loduis/feec-helpers": "dev-main"
     },
     "require-dev": {
-        "loduis/xml-tests": "master"
+        "loduis/xml-tests": "master",
+        "loduis/feec-document": "dev-main"
     },
     "repositories": [
         {
@@ -45,6 +46,10 @@
         {
             "type": "vcs",
             "url": "https://github.com/loduis/php-fe-ec-helpers.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/loduis/php-fe-ec-document.git"
         }
     ],
     "config": {

@@ -1,7 +1,5 @@
 <?php
 
-// https://gist.github.com/alcidesrivera/066257039fe024851f9d
-
 namespace FEEC\Request;
 
 use SoapClient;
@@ -29,17 +27,23 @@ class Client
     {
         $url = $this->urlFromMethod($method);
         $soap = new SoapClient($url, [
+            'trace' => true,
             'stream_context' => stream_context_create([
                 'ssl' => [
                     'verify_peer' => false,
                 ]
             ])
         ]);
+
         $res = $soap->$method($params);
+        $request = $soap->__getLastRequest();
+        $response = $soap->__getLastResponse();
 
         return Response::from($res, [
             'action' => $method,
-            'params' => $params
+            'request' => $request,
+            'response' => $response,
+            'environment' => $this->environment
         ]);
     }
 
@@ -50,6 +54,6 @@ class Client
             $url = str_replace('/celcer.', '/cel.', $url);
         }
 
-        return $url . static::SERVICES[$name] . 'ComprobantesOffline??wsdl';
+        return $url . static::SERVICES[$name] . 'ComprobantesOffline?wsdl';
     }
 }
