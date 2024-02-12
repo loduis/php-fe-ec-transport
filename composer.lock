@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fde39500e80753d283abfe49221b4cd0",
+    "content-hash": "f4e30e452d7a00421682c3d0470fe2d8",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -706,42 +706,6 @@
                 "source": "https://github.com/loduis/php-xml-support/tree/master"
             },
             "time": "2023-10-04T16:26:50+00:00"
-        },
-        {
-            "name": "loduis/zip",
-            "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/loduis/php-zip.git",
-                "reference": "ef6c59e996c7ca7aa031f76bc5d287e66a10f915"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/loduis/php-zip/zipball/ef6c59e996c7ca7aa031f76bc5d287e66a10f915",
-                "reference": "ef6c59e996c7ca7aa031f76bc5d287e66a10f915",
-                "shasum": ""
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Zip\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Loduis Madariaga",
-                    "email": "loduis@gmail.com"
-                }
-            ],
-            "support": {
-                "source": "https://github.com/loduis/php-zip/tree/main",
-                "issues": "https://github.com/loduis/php-zip/issues"
-            },
-            "time": "2023-10-16T12:03:59+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -4018,7 +3982,6 @@
     "stability-flags": {
         "loduis/feec-signer": 20,
         "loduis/support": 20,
-        "loduis/zip": 20,
         "loduis/feec-helpers": 20,
         "loduis/feec-document": 20
     },

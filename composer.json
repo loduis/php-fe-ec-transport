@@ -22,7 +22,6 @@
         "loduis/feec-signer": "dev-main",
         "loduis/xml-finder": "master",
         "loduis/support": "dev-main",
-        "loduis/zip": "dev-main",
         "loduis/xml-support": "master",
         "loduis/feec-helpers": "dev-main"
     },
@@ -31,10 +30,6 @@
         "loduis/feec-document": "dev-main"
     },
     "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/loduis/php-zip.git"
-        },
         {
             "type": "vcs",
             "url": "https://github.com/loduis/php-support.git"
