@@ -4,7 +4,7 @@ namespace FEEC\Response;
 
 use stdClass;
 
-use function FEEC\arr_obj;
+use function Php\array_object as arr_obj;
 
 abstract class Model
 {
