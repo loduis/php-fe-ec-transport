@@ -179,7 +179,8 @@ class ResponseTest extends TestCase
         $this->assertEquals('0102202401180191122100110010030000000011234567917', $res->key);
         $this->assertEquals(ENV_TEST, $res->environment);
         $this->assertEquals(STATUS_REJECTED, $res->status);
-        $this->assertTrue($res->isValid);
+        $this->assertFalse($res->isValid);
+        $this->assertTrue($res->duplicate);
         $this->assertCount(1, $res->notifications);
         $entry = $res->notifications[0];
         $this->assertEquals(45, $entry->code);

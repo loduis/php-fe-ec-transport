@@ -13,6 +13,8 @@ class Send extends Model
 
     public bool $isValid = false;
 
+    public bool $duplicate = false;
+
     public int $environment;
 
     public string $status;
@@ -34,11 +36,10 @@ class Send extends Model
 
             if ($this->status === STATUS_REJECTED) {
                 foreach ($this->notifications as $notify) {
-                    if (in_array($notify->code, [
-                        43, // Clave de acceso duplicada
-                        45 // Numero sequencial duplicado
-                    ])) {
+                    if ($notify->code === 43) {
                         $this->isValid = true;
+                    } else if ($notify->code === 45) {
+                        $this->duplicate = true;
                     }
                 }
             }
