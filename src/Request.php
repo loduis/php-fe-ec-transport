@@ -80,7 +80,7 @@ class Request
             throw new Exception('The environment not match');
         }
 
-        $dom = $doc->create();
+        $dom = $doc->create(true);
 
         return $this->signer->sign($dom);
     }
