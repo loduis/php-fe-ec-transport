@@ -18,10 +18,10 @@
         }
     },
     "require": {
-        "php": "^7.4|^8.0",
+        "php": "^8.0",
         "loduis/feec-signer": "dev-main",
         "loduis/xml-finder": "master",
-        "loduis/support": "dev-main",
+        "loduis/php-support": "^3.0",
         "loduis/xml-support": "master",
         "loduis/feec-helpers": "dev-main"
     },
