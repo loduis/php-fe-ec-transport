@@ -18,6 +18,7 @@
         }
     },
     "require": {
+        "ext-curl": "*",
         "php": "^8.0|^8.4",
         "loduis/feec-signer": "dev-main",
         "loduis/xml-finder": "master",
@@ -26,10 +27,18 @@
         "loduis/feec-helpers": "dev-main"
     },
     "require-dev": {
+        "loduis/electronic-simulator": "dev-main",
         "loduis/xml-tests": "master",
         "loduis/feec-document": "dev-main"
     },
     "repositories": [
+        {
+            "type": "path",
+            "url": "../php-electronic-simulator",
+            "options": {
+                "symlink": true
+            }
+        },
         {
             "type": "vcs",
             "url": "https://github.com/loduis/php-support.git"

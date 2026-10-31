@@ -23,7 +23,7 @@ abstract class Model
 
     protected function addNotifications(stdClass $res)
     {
-        $mensajes = $res->mensajes ? $res->mensajes : [];
+        $mensajes = $res->mensajes ?? [];
         foreach ($mensajes as $mensaje) {
             $this->notifications[] = arr_obj([
                 'code' => (int) $mensaje->identificador,

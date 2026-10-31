@@ -4,14 +4,14 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9f882098c28cf2a726ecb28f34b862c8",
+    "content-hash": "6ba0523a69e3df69c05d5e74d9243eea",
     "packages": [
         {
             "name": "loduis/feec-helpers",
             "version": "dev-main",
             "source": {
                 "type": "git",
-                "url": "https://github.com/loduis/php-fe-ec-helpers.git",
+                "url": "git@github.com:loduis/php-fe-ec-helpers.git",
                 "reference": "1a2bd87f563d7be0c328a3aad64ee900b3ff9ea7"
             },
             "dist": {
@@ -53,7 +53,7 @@
             "version": "dev-main",
             "source": {
                 "type": "git",
-                "url": "https://github.com/loduis/php-fe-ec-signer.git",
+                "url": "git@github.com:loduis/php-fe-ec-signer.git",
                 "reference": "ee598828715e66f7136986ba06e4453ad10dd253"
             },
             "dist": {
@@ -102,7 +102,7 @@
             "version": "dev-main",
             "source": {
                 "type": "git",
-                "url": "https://github.com/loduis/php-support.git",
+                "url": "git@github.com:loduis/php-support.git",
                 "reference": "bacd92f8836e8379b0e3010c1380bd1d52dd94fe"
             },
             "dist": {
@@ -433,11 +433,50 @@
             "time": "2022-12-30T00:15:36+00:00"
         },
         {
+            "name": "loduis/electronic-simulator",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "../php-electronic-simulator",
+                "reference": "39416671eba2e5332c0b1efbf39996e743632c8f"
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": "^8.0|^8.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Electronic\\Simulator\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Loduis Madariaga",
+                    "email": "loduis@gmail.com"
+                }
+            ],
+            "description": "Local-only infrastructure for electronic document simulators",
+            "keywords": [
+                "electronic documents",
+                "simulator",
+                "testing"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
             "name": "loduis/feec-document",
             "version": "dev-main",
             "source": {
                 "type": "git",
-                "url": "https://github.com/loduis/php-fe-ec-document.git",
+                "url": "git@github.com:loduis/php-fe-ec-document.git",
                 "reference": "911268b1ca56f81243e6349b8c1685489c4a377f"
             },
             "dist": {
@@ -3147,6 +3186,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "loduis/electronic-simulator": 20,
         "loduis/feec-document": 20,
         "loduis/feec-helpers": 20,
         "loduis/feec-signer": 20
@@ -3154,7 +3194,8 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^8.0"
+        "ext-curl": "*",
+        "php": "^8.0|^8.4"
     },
     "platform-dev": {},
     "plugin-api-version": "2.6.0"

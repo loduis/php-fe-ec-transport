@@ -16,9 +16,14 @@ class Request
 
     private Signer $signer;
 
-    public function __construct(string $filename, string $password, int $environment = ENV_TEST)
+    public function __construct(
+        string $filename,
+        string $password,
+        int $environment = ENV_TEST,
+        ?string $simulatorOrigin = null
+    )
     {
-        $this->client = new Client($environment);
+        $this->client = new Client($environment, $simulatorOrigin);
 
         $this->signer = new Signer([
             'certificate' => x509([
