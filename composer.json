@@ -1,5 +1,6 @@
 {
     "name": "loduis/feec-transport",
+    "description": "Transport client for Ecuador SRI electronic documents",
     "authors": [
         {
             "name": "Loduis Madariaga",
@@ -27,17 +28,14 @@
         "loduis/feec-helpers": "dev-main"
     },
     "require-dev": {
-        "loduis/electronic-simulator": "dev-main",
+        "loduis/electronic-simulator": "^0.1",
         "loduis/xml-tests": "master",
         "loduis/feec-document": "dev-main"
     },
     "repositories": [
         {
-            "type": "path",
-            "url": "../php-electronic-simulator",
-            "options": {
-                "symlink": true
-            }
+            "type": "vcs",
+            "url": "git@github.com:myabakus/php-e-invoice-simulator.git"
         },
         {
             "type": "vcs",
